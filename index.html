@@ -214,8 +214,7 @@
         function save () {
             var ssid = $('#ssid').val();
             if (!ssid) return;
-            var 
-            = $('#hidden').is(':checked');
+            var hidden = $('#hidden').is(':checked');
             var enc = $('#enc').val();
             var key = $('#key').val();
             var storage = $.localStorage('qificodes');
