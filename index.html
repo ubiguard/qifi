@@ -25,7 +25,7 @@
     </style>
 </head>
 <body>
-    <h1>hi</h1>
+    <h1>hik version</h1>
 
     <nav class="navbar navbar-inverse navbar-fixed-top">
       <div class="container">
@@ -189,11 +189,12 @@
                 $('#showkey').text('');
             }
             // http://code.google.com/p/zxing/wiki/BarcodeContents#Wifi_Network_config_(Android)
-            var qrstring = 'WIFI:S:'+escape_string(ssid)+';T:'+enc+';P:'+escape_string(key)+';';
-            if (hidden) {
-                qrstring += 'H:true';
-            }
-            qrstring += ';';
+            // HK format: WIFI:T:WPA/WPA2;S:TESTSSID;P:test1234;
+            var qrstring = 'WIFI:T:'+enc+';S:'+escape_string(ssid)+';P:'+escape_string(key)+';';
+            //if (hidden) {
+            //    qrstring += 'H:true';
+            //}
+            //qrstring += ';';
             $('#qrcode').empty();
             $('#qrcode').qrcode(qrstring);
             $('#showssid').text('SSID: '+ssid);
@@ -213,7 +214,8 @@
         function save () {
             var ssid = $('#ssid').val();
             if (!ssid) return;
-            var hidden = $('#hidden').is(':checked');
+            var 
+            = $('#hidden').is(':checked');
             var enc = $('#enc').val();
             var key = $('#key').val();
             var storage = $.localStorage('qificodes');
