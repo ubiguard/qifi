@@ -1,5 +1,8 @@
-QiFi
+QiFi 
 ========
+NOTE: slightly modified to work with HIKVISION ip cameras
+Hikvision format is: `WIFI:T:{sec_type};S:{ssid};P:{key};`
+ie: `WIFI:T:WPA/WPA2;S:TESTSSID;P:test1234;`
 
 License
 -------
