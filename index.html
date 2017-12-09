@@ -100,7 +100,9 @@
     </form>
     <h1 id="showssid">SSID: none</h1>
     <h1 id="showkey">WPA: none</h1>
-    <div id="qrcode"></div>
+    <div id="qrcode"></div>    
+    <div id="qrtext"></div>
+       
     </section>
     <section id="about">
         <div class="page-header"><h1 class="anchor">About</h1></div>
@@ -191,6 +193,9 @@
             // http://code.google.com/p/zxing/wiki/BarcodeContents#Wifi_Network_config_(Android)
             // HK format: WIFI:T:WPA/WPA2;S:TESTSSID;P:test1234;
             var qrstring = 'WIFI:T:'+enc+';S:'+escape_string(ssid)+';P:'+escape_string(key)+';';
+            
+            $('#qrtext').empty();
+            $('#qrtext').text(qrstring);            
             //if (hidden) {
             //    qrstring += 'H:true';
             //}
