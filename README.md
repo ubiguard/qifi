@@ -4,6 +4,15 @@ NOTE: slightly modified to work with HIKVISION ip cameras
 
 Hikvision format is: `WIFI:T:{sec_type};S:{ssid};P:{key};`
 
+The {sec_type} should be one of this:
+  - NONE
+  - WEP
+  - WPA/WPA2
+
+Any other string will make the activation fail
+
+
+
 ie: `WIFI:T:WPA/WPA2;S:TESTSSID;P:test1234;`
 
 License
